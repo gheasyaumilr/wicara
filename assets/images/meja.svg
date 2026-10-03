@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Meja">
+  <title>Meja</title>
+  <rect x="112" y="250" width="32" height="176" fill="#854F0B" stroke="#2C2C2A" stroke-width="12"/>
+  <rect x="368" y="250" width="32" height="176" fill="#854F0B" stroke="#2C2C2A" stroke-width="12"/>
+  <rect x="72" y="200" width="368" height="58" rx="12" fill="#BA7517" stroke="#2C2C2A" stroke-width="12"/>
+  <ellipse cx="256" cy="206" rx="72" ry="17" fill="#F1EFE8" stroke="#2C2C2A" stroke-width="10"/>
+  <ellipse cx="256" cy="206" rx="43" ry="8" fill="none" stroke="#B4B2A9" stroke-width="7"/>
+</svg>

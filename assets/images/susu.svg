@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Susu">
+  <title>Susu</title>
+  <rect x="152" y="206" width="208" height="216" fill="#F1EFE8"/>
+  <polygon points="152,206 256,132 360,206" fill="#B5D4F4"/>
+  <path d="M256 132 L256 206" stroke="#2C2C2A" stroke-width="8" opacity="0.35"/>
+  <rect x="186" y="268" width="140" height="118" rx="12" fill="#378ADD"/>
+  <rect x="186" y="268" width="140" height="118" rx="12" fill="none" stroke="#2C2C2A" stroke-width="10"/>
+  <text x="256" y="343" text-anchor="middle" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="40" font-weight="700" fill="#FFFFFF">SUSU</text>
+  <rect x="152" y="206" width="208" height="216" fill="none" stroke="#2C2C2A" stroke-width="12"/>
+  <polygon points="152,206 256,132 360,206" fill="none" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M152 206 L360 206" stroke="#2C2C2A" stroke-width="12"/>
+</svg>

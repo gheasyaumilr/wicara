@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Sepatu">
+  <title>Sepatu</title>
+  <path d="M104 366 L104 318 C 104 296 118 284 142 278 L 200 264 C 220 259 236 268 244 286 L 258 316 L 330 344 C 372 354 412 360 446 366 Z" fill="#378ADD" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M330 344 C 372 354 412 360 446 366 L 330 366 Z" fill="#B5D4F4"/>
+  <g stroke="#F1EFE8" stroke-width="10" stroke-linecap="round">
+    <path d="M166 292 L228 310"/>
+    <path d="M164 314 L226 332"/>
+  </g>
+  <circle cx="152" cy="272" r="13" fill="#EF9F27" stroke="#2C2C2A" stroke-width="8"/>
+  <rect x="76" y="364" width="372" height="40" rx="20" fill="#2C2C2A"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Bebek">
+  <title>Bebek</title>
+  <ellipse cx="256" cy="440" rx="206" ry="52" fill="#85B7EB" opacity="0.5"/>
+  <path d="M118 438 q42 -14 86 0" fill="none" stroke="#B5D4F4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M310 462 q34 -12 70 0" fill="none" stroke="#B5D4F4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M398 312 C438 300 462 282 474 258 C476 300 452 330 410 344 Z" fill="#EF9F27" stroke="#2C2C2A" stroke-width="10" stroke-linejoin="round"/>
+  <ellipse cx="256" cy="352" rx="158" ry="106" fill="#EF9F27" stroke="#2C2C2A" stroke-width="12"/>
+  <path d="M164 156 C120 158 84 168 68 180 C84 192 120 202 164 204 Z" fill="#D85A30" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <circle cx="228" cy="170" r="78" fill="#EF9F27" stroke="#2C2C2A" stroke-width="12"/>
+  <ellipse cx="300" cy="352" rx="74" ry="52" fill="#BA7517" stroke="#2C2C2A" stroke-width="10" transform="rotate(-12 300 352)"/>
+  <circle cx="198" cy="146" r="13" fill="#2C2C2A"/>
+  <circle cx="203" cy="140" r="5" fill="#FFFFFF"/>
+</svg>

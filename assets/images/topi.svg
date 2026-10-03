@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Topi">
+  <title>Topi</title>
+  <path d="M128 300 A 128 128 0 0 1 384 300 Z" fill="#378ADD" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M256 172 L256 300" stroke="#2C2C2A" stroke-width="9" opacity="0.45"/>
+  <path d="M166 210 A 128 128 0 0 1 200 186" fill="none" stroke="#B5D4F4" stroke-width="14" stroke-linecap="round"/>
+  <ellipse cx="256" cy="302" rx="198" ry="38" fill="#185FA5" stroke="#2C2C2A" stroke-width="12"/>
+  <circle cx="256" cy="172" r="17" fill="#F1EFE8" stroke="#2C2C2A" stroke-width="9"/>
+</svg>

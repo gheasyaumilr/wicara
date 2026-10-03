@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f6e56">
+<title>Halaman Uji - Wicara Phase 0</title>
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="page-test">
+
+<div class="app">
+
+  <header class="topbar">
+    <span class="pill">Halaman uji Phase 0</span>
+    <div class="topbar-right">
+      <span class="pill pill-muted" id="netPill">online</span>
+      <a class="btn-mini" href="index.html">Halaman latihan</a>
+    </div>
+  </header>
+
+  <h1 class="sr-only">Halaman uji kemampuan browser dan mesin evaluasi</h1>
+
+  <p class="banner banner-warn" style="margin:0">
+    <strong>Cara pakai</strong>
+    Buka halaman ini lewat <code>http://localhost/...</code> atau <code>https://</code>. Kalau dibuka
+    langsung dari file (<code>file://</code>), microphone dan pengenalan suara akan diblokir browser.
+    Bagian yang gagal ditandai merah dan tetap bisa kamu salin untuk dilaporkan.
+  </p>
+
+  <section class="test-section">
+    <h2>1. Lingkungan dan dukungan API</h2>
+    <p class="section-note">Menentukan fitur mana yang bisa dipakai di perangkat yang sedang kamu pakai.</p>
+    <div class="cap-list" id="capList"></div>
+  </section>
+
+  <section class="test-section">
+    <h2>2. Suara untuk instruksi (TTS)</h2>
+    <p class="section-note">Aplikasi butuh suara bahasa Indonesia. Kalau tidak ada, instruksi dibacakan dengan suara default.</p>
+    <div class="row" style="margin-bottom:10px">
+      <button type="button" class="btn-small" id="btnRefreshVoices">Muat ulang daftar suara</button>
+      <span class="muted small" id="voiceCount">-</span>
+    </div>
+    <div id="voiceList" style="margin-bottom:12px"></div>
+    <div class="field">
+      <label for="ttsText">Kalimat uji</label>
+      <div class="field-row">
+        <input type="text" id="ttsText" value="Coba bilang apel" autocomplete="off">
+        <button type="button" class="btn-small btn-small-primary" id="btnSpeakTest">Putar</button>
+      </div>
+    </div>
+    <p class="hint" id="ttsStatus" style="margin-top:10px">Belum diuji.</p>
+  </section>
+
+  <section class="test-section">
+    <h2>3. Izin microphone</h2>
+    <p class="section-note">Harus berhasil sebelum pengenalan suara bisa dipakai.</p>
+    <div class="row">
+      <button type="button" class="btn-small btn-small-primary" id="btnAskMic">Minta izin microphone</button>
+      <span class="muted small" id="micState">status: memeriksa...</span>
+    </div>
+    <p class="hint" id="micResult" style="margin-top:10px">Belum diuji.</p>
+  </section>
+
+  <section class="test-section">
+    <h2>4. Tes pengenalan suara (STT)</h2>
+    <p class="section-note">
+      Ucapkan kata target, lalu lihat apa yang ditangkap browser. Bagian ini yang paling penting untuk
+      diuji dengan suara anak.
+    </p>
+    <div class="field">
+      <label for="sttTarget">Kata target</label>
+      <div class="field-row">
+        <input type="text" id="sttTarget" list="sttTargetList" value="apel" autocomplete="off">
+        <button type="button" class="btn-small btn-small-primary" id="btnSttRecord">Mulai rekam</button>
+        <button type="button" class="btn-small" id="btnSttStop">Stop</button>
+      </div>
+      <datalist id="sttTargetList"></datalist>
+    </div>
+    <p class="hint" id="sttStatus" style="margin-top:10px">Belum diuji.</p>
+    <div class="transcript-box" id="sttRaw" style="margin-top:10px"><span class="empty">Transkripsi akan muncul di sini.</span></div>
+    <div class="row" style="margin-top:10px">
+      <span class="muted small" id="sttMeta">durasi: -</span>
+    </div>
+    <div id="sttAlts" style="margin-top:10px"></div>
+    <div id="sttVerdict" style="margin-top:10px"></div>
+  </section>
+
+  <section class="test-section">
+    <h2>5. Uji mesin evaluasi</h2>
+    <p class="section-note">
+      Menguji fungsi pembanding target dengan transkripsi. Kasus di bawah selalu dijalankan pada
+      ambang 0.6 supaya hasilnya tetap sama setiap kali.
+    </p>
+    <div class="row" style="margin-bottom:12px">
+      <button type="button" class="btn-small btn-small-primary" id="btnRunCases">Jalankan semua kasus</button>
+      <span id="caseSummary" class="small muted">Belum dijalankan.</span>
+    </div>
+    <div id="caseBody"></div>
+  </section>
+
+  <section class="test-section">
+    <h2>6. Menyetel ambang kemiripan</h2>
+    <p class="section-note">
+      Ambang menentukan kapan sebuah ucapan dianggap "hampir benar". Geser untuk melihat pengaruhnya.
+      Nilai ini nanti dipakai di halaman latihan.
+    </p>
+    <div class="field">
+      <label for="threshold">Ambang kemiripan: <strong id="thresholdValue">0.60</strong></label>
+      <input type="range" id="threshold" min="0.3" max="0.95" step="0.05" value="0.6" style="padding:0">
+    </div>
+    <div id="probeBody" style="margin-top:12px"></div>
+    <div class="field" style="margin-top:14px">
+      <label for="customTranscript">Coba pasangan sendiri</label>
+      <div class="field-row">
+        <input type="text" id="customTarget" placeholder="target, misalnya apel" autocomplete="off">
+        <input type="text" id="customTranscript" placeholder="yang terdengar" autocomplete="off">
+      </div>
+    </div>
+    <div id="customResult" style="margin-top:10px"></div>
+  </section>
+
+  <section class="test-section">
+    <h2>7. Log uji suara anak</h2>
+    <p class="section-note">
+      Ini bagian yang paling berguna. Catat setiap percobaan, lalu unduh hasilnya. Dua angka yang
+      paling penting adalah <strong>salah dengar</strong> (anak sudah benar tapi aplikasi bilang belum)
+      dan <strong>lolos keliru</strong> (anak belum benar tapi aplikasi bilang benar).
+    </p>
+
+    <div class="field">
+      <label for="trialChild">Nama atau kode anak (opsional)</label>
+      <input type="text" id="trialChild" placeholder="misalnya: A" autocomplete="off">
+    </div>
+
+    <div class="field" style="margin-top:10px">
+      <label for="trialTarget">Kata target</label>
+      <div class="field-row">
+        <input type="text" id="trialTarget" list="sttTargetList" placeholder="apel" autocomplete="off">
+        <button type="button" class="btn-small" id="btnTrialRecord">Rekam</button>
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:10px">
+      <label for="trialSaid">Menurut telinga penguji, anak mengucapkan</label>
+      <input type="text" id="trialSaid" placeholder="tulis apa yang benar-benar diucapkan anak" autocomplete="off">
+    </div>
+
+    <div class="field" style="margin-top:10px">
+      <label for="trialHeard">Yang ditangkap aplikasi</label>
+      <input type="text" id="trialHeard" placeholder="terisi otomatis dari rekaman, boleh diedit" autocomplete="off">
+    </div>
+
+    <div class="row" style="margin-top:12px">
+      <button type="button" class="btn-small btn-small-primary" id="btnAddTrial">Tambah ke log</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn-small" id="btnExportTrials">Unduh log</button>
+      <button type="button" class="btn-small" id="btnClearTrials">Kosongkan</button>
+    </div>
+
+    <div id="trialSummary" style="margin-top:14px"></div>
+    <div id="trialBody" style="margin-top:12px"></div>
+  </section>
+
+  <section class="test-section">
+    <h2>8. Log teknis</h2>
+    <p class="section-note">Catatan kejadian selama pengujian. Salin dan kirimkan kalau ada yang gagal.</p>
+    <div class="log" id="logPanel"></div>
+    <div class="row" style="margin-top:10px">
+      <button type="button" class="btn-small" id="btnCopyLog">Salin log</button>
+      <button type="button" class="btn-small" id="btnCopyAll">Salin semua hasil uji</button>
+      <button type="button" class="btn-small" id="btnClearLog">Bersihkan</button>
+    </div>
+  </section>
+
+  <p class="footer-note">
+    Phase 0 - proof of concept. Tidak ada data yang dikirim ke server. Audio tidak disimpan.
+  </p>
+
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/exercises.js"></script>
+<script src="assets/js/therapy.js"></script>
+<script src="assets/js/speech.js"></script>
+<script src="assets/js/microphone.js"></script>
+<script src="assets/js/test.js"></script>
+</body>
+</html>

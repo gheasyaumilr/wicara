@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kucing">
+  <title>Kucing</title>
+  <polygon points="152,196 126,74 246,138" fill="#EF9F27" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <polygon points="360,196 386,74 266,138" fill="#EF9F27" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <polygon points="158,178 146,112 212,148" fill="#F5C4B3"/>
+  <polygon points="354,178 366,112 300,148" fill="#F5C4B3"/>
+  <circle cx="256" cy="278" r="148" fill="#EF9F27" stroke="#2C2C2A" stroke-width="12"/>
+  <circle cx="204" cy="248" r="19" fill="#2C2C2A"/>
+  <circle cx="308" cy="248" r="19" fill="#2C2C2A"/>
+  <circle cx="211" cy="241" r="7" fill="#FFFFFF"/>
+  <circle cx="315" cy="241" r="7" fill="#FFFFFF"/>
+  <polygon points="256,292 234,314 278,314" fill="#D4537E" stroke="#2C2C2A" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M256 314 L256 336" stroke="#2C2C2A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M256 336 Q 234 356 212 340" fill="none" stroke="#2C2C2A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M256 336 Q 278 356 300 340" fill="none" stroke="#2C2C2A" stroke-width="8" stroke-linecap="round"/>
+  <g stroke="#2C2C2A" stroke-width="8" stroke-linecap="round">
+    <path d="M110 268 L190 282"/>
+    <path d="M106 312 L190 306"/>
+    <path d="M402 268 L322 282"/>
+    <path d="M406 312 L322 306"/>
+  </g>
+</svg>

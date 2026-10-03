@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Apel">
+  <title>Apel</title>
+  <path d="M256 152c-34-40-92-52-136-26-56 33-66 116-28 190 28 54 72 96 112 96 20 0 32-10 52-10s32 10 52 10c40 0 84-42 112-96 38-74 28-157-28-190-44-26-102-14-136 26z" fill="#E24B4A" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M256 154c0-34 6-58 20-78" fill="none" stroke="#6B4423" stroke-width="16" stroke-linecap="round"/>
+  <path d="M272 108c24-30 62-40 92-28-8 32-42 54-78 46z" fill="#639922" stroke="#2C2C2A" stroke-width="10" stroke-linejoin="round"/>
+  <ellipse cx="196" cy="248" rx="24" ry="38" fill="#F09595" opacity="0.5" transform="rotate(-25 196 248)"/>
+</svg>

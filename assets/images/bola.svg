@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Bola">
+  <title>Bola</title>
+  <defs>
+    <clipPath id="bolaClip"><circle cx="256" cy="256" r="160"/></clipPath>
+  </defs>
+  <circle cx="256" cy="256" r="160" fill="#F1EFE8"/>
+  <g clip-path="url(#bolaClip)">
+    <path d="M256 96 C 190 180 190 332 256 416 L 96 416 L 96 96 Z" fill="#378ADD"/>
+    <path d="M256 96 C 322 180 322 332 256 416 L 416 416 L 416 96 Z" fill="#E24B4A"/>
+    <path d="M256 96 C 190 180 190 332 256 416 C 322 332 322 180 256 96 Z" fill="#EF9F27"/>
+  </g>
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#2C2C2A" stroke-width="12"/>
+</svg>

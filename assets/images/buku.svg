@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Buku">
+  <title>Buku</title>
+  <polygon points="256,178 88,144 88,372 256,406" fill="#F1EFE8" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <polygon points="256,178 424,144 424,372 256,406" fill="#FBF9F4" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <g stroke="#B4B2A9" stroke-width="9" stroke-linecap="round">
+    <path d="M120 212 L220 230"/>
+    <path d="M120 260 L220 278"/>
+    <path d="M120 308 L220 326"/>
+    <path d="M292 230 L392 212"/>
+    <path d="M292 278 L392 260"/>
+    <path d="M292 326 L392 308"/>
+  </g>
+  <path d="M256 178 L256 406" stroke="#2C2C2A" stroke-width="12"/>
+</svg>

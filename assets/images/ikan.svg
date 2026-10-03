@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ikan">
+  <title>Ikan</title>
+  <polygon points="368,256 470,176 470,336" fill="#1D9E75" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <polygon points="228,158 266,104 298,160" fill="#1D9E75" stroke="#2C2C2A" stroke-width="12" stroke-linejoin="round"/>
+  <ellipse cx="240" cy="258" rx="150" ry="104" fill="#5DCAA5" stroke="#2C2C2A" stroke-width="12"/>
+  <circle cx="170" cy="228" r="22" fill="#2C2C2A"/>
+  <circle cx="178" cy="220" r="7" fill="#FFFFFF"/>
+  <path d="M116 302 Q 176 342 240 306" fill="none" stroke="#2C2C2A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M196 196 Q 232 226 196 254" fill="none" stroke="#2C2C2A" stroke-width="9" stroke-linecap="round" opacity="0.6"/>
+</svg>
